@@ -1,0 +1,327 @@
+
+<html>
+<head>
+	<title>王洪中 2203312566 计算机001</title>	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+	<script type="text/javascript" src="js/custom.js"></script>
+	<script type="text/javascript" src="js/color.js"></script>
+</head>
+<body >
+	
+	<div id="scrollbar1" class="container1 s">
+		<div id="name" ><font color="#000000" size=4>计算机各课程关系图</font></div>
+		<script src="js/d3.v3.min.js" charset="utf-8"></script>  
+	<script>           
+	var nodes = [
+		{ name: "通信原理",group:1    },
+		{ name: "大学物理",group:1    },
+		{ name: "电路",group:1    },
+		{ name: "模电",group:1  },
+		{ name: "数电",group:1  },
+		{ name: "计算机原理",group:1  },
+		{ name: "物理实验",group:1  },
+		{ name: "电路实验",group:1  },
+		{ name: "工图",group:1    },
+		{ name: "电子技术实验",group:1    },
+		{ name: "电子课程设计",group:1    },
+		{ name: "汇编语言",group:1    },
+		{ name: "网络编程",group:1    },
+		{ name: "系统结构",group:1    },
+		{ name: "高性能计算机导论",group:1    },
+		{ name: "微处理器设计",group:1    },
+		{ name: "VSLI设计",group:1    },
+		{ name: "微计算机",group:1    },
+		{ name: "设计自动化",group:1    },
+		{ name: "计算机网络",group:1    },
+		{ name: "网络训练",group:1    },
+		{ name: "网络安全",group:1    },
+		{ name: "操作系统",group:1    },
+		{ name: "嵌入式系统",group:1    },
+		{ name: "计算机导论",group:1    },
+		{ name: "计算机程序设计",group:1    },
+		{ name: "信息概论",group:1    },
+		{ name: "一元微积分",group:1    },
+		{ name: "C++/java",group:1    },
+		{ name: "多元积分",group:1    },
+		{ name: "几何与代数",group:1    },
+		{ name: "离散数学",group:1    },
+		{ name: "数据结构",group:1    },
+		{ name: "形式语言",group:1    },
+		{ name: "数论",group:1    },
+		{ name: "人工智能",group:1    },
+		{ name: "复变函数",group:1    },
+		{ name: "数值分析",group:1    },
+		{ name: "高等微积分",group:1    },
+		{ name: "概率论",group:1    },
+		{ name: "系统分析",group:1    },
+		{ name: "神经网络",group:1    },
+		{ name: "现代控制",group:1    },
+		{ name: "信号处理",group:1    },
+		{ name: "图像处理",group:1    },
+		{ name: "模式识别",group:1    },
+		{ name: "人机交互理论",group:1    },
+		{ name: "多媒体计算机",group:1    },
+		{ name: "机器学习",group:1    },
+		{ name: "信息检索",group:1    },
+		{ name: "图形学",group:1    },
+		{ name: "虚拟现实",group:1    },
+		{ name: "数据库",group:1    },
+		{ name: "数据挖掘",group:1    },
+		{ name: "电子商务",group:1    },
+		{ name: "软将工程",group:1    },
+		{ name: "软件开发方法",group:1    },
+		{ name: "编译原理",group:1    },
+		{ name: "通信电路",group:1    },
+		
+		];
+				 
+	var edges = [ 
+		 { source :1   , target:2  } , 
+		 { source :2   , target:3  } ,
+		 { source :3   , target:4  },
+		 { source : 4  , target:5  } , 
+		 { source :5   , target:12  } ,
+		 { source :5   , target:13  },   
+		 { source :6   , target:2  } , 
+		 { source :7   , target:3  } ,
+		 { source :8   , target:3  },   
+		 { source :9   , target:4  } , 
+		 { source :10   , target:4  } ,
+		 { source :11   , target:5  },        
+		 { source :12   , target:19  } , 
+		 { source :5   , target:17  } ,
+		 { source :5   , target:19  },   
+		 { source :5   , target:22  } , 
+		 { source : 5  , target: 18 } ,
+		 { source :13   , target: 14 },   
+		 { source :13   , target: 15 } , 
+		 { source : 5  , target:16  } ,
+		 { source :19   , target:21  },   
+		 { source :20   , target:21  } , 
+		 { source : 22  , target:23  } ,
+		 { source : 1  , target: 28 },   
+		 { source : 6  , target:28  } , 
+		 { source : 24  , target: 28 } ,
+		 { source : 25  , target: 28 },   
+		 { source :  26 , target: 28 } , 
+		 { source :  27 , target:28  } ,
+		 { source :  28 , target:32  } ,
+		 { source : 1  , target: 29 },   
+		 { source : 6  , target: 29 } , 
+		 { source : 24  , target: 29 } ,
+		 { source : 25  , target: 29 },   
+		 { source : 27  , target: 29 } , 
+		 { source : 29  , target: 30 } ,
+		 { source : 29  , target: 38 } ,
+		 { source : 30  , target:31  },   
+		 { source : 30  , target: 37 } , 
+		 { source :  30 , target:36  } ,
+		 { source : 36  , target: 39 },   
+		 { source : 38  , target: 40 } , 
+		 { source : 40  , target:42  } ,
+		 { source : 41  , target: 42 },   
+		 { source : 39  , target:43  } , 
+		 { source : 43  , target:44  } ,
+		 { source : 31  , target:35  },   
+		 { source : 35  , target: 45 } , 
+		 { source :  35 , target:44  } ,
+		 { source : 43  , target:45  },   
+		 { source :  45 , target: 47 } , 
+		 { source : 45  , target: 46 } ,
+		 { source : 35  , target: 48 },   
+		 { source : 48  , target:49  } , 
+		 { source : 31  , target:34  } ,
+		 { source :  31 , target: 33 },  
+		 { source :  31 , target: 32 } , 
+		 { source :  32 , target: 22 } ,
+		 { source : 32  , target: 57 },   
+		 { source :  32 , target: 55 } , 
+		 { source :  32 , target: 52 } ,
+		 { source :  32 , target: 50 },   
+		 { source : 50  , target: 51 } , 
+		 { source : 52  , target: 53 } ,
+		 { source :  52 , target: 54 },  
+		 { source :  55 , target: 56 } , 
+		 { source : 58  , target:0  } ,
+		 { source : 0  , target: 43 },
+			];    
+	
+	var width = 1600;
+	var height =700;
+	
+	
+	var svg = d3.select(".container1")
+				.append("svg")
+				.attr("width",width)
+				.attr("height",height);
+	
+	var force = d3.layout.force()
+			.nodes(nodes)        //指定节点数组
+			.links(edges)        //指定连线数组
+			.size([width,height])    //指定范围
+			.linkDistance(150)    //指定连线长度
+			.charge(-400);    //相互之间的作用力
+
+	force.start();    //开始作用
+
+	console.log(nodes);
+	console.log(edges);
+	
+	//添加连线        
+	var svg_edges = svg.selectAll("line")
+						.data(edges)
+						.attr("class", "links")
+						.enter()
+						.append("line")
+						.style("stroke","#ccc")
+						.style("stroke-width",1);
+	
+	var color = d3.scale.category20();
+			
+	//添加节点            
+	var svg_nodes = svg.selectAll("circle")
+						.data(nodes)
+						.attr("class", "nodes")
+						.enter()
+						.append("circle")
+						.attr("r",10)
+						.style("fill",function(d,i){
+							return color(i);
+						})
+						.call(force.drag);    //使得节点能够拖动
+
+	//添加描述节点的文字
+	var svg_texts = svg.selectAll("text")
+						.data(nodes)
+						.enter()
+						.append("text")
+						.style("fill", "black")
+						.attr("dx", 10)
+						.attr("dy", 8)
+						.text(function(d){
+							return d.name;
+						});
+				
+
+	force.on("tick", function(){    //对于每一个时间间隔
+	
+		 //更新连线坐标
+		 svg_edges.attr("x1",function(d){ return d.source.x; })
+				 .attr("y1",function(d){ return d.source.y; })
+				 .attr("x2",function(d){ return d.target.x; })
+				 .attr("y2",function(d){ return d.target.y; });
+		 
+		 //更新节点坐标
+		 svg_nodes.attr("cx",function(d){ return d.x; })
+				 .attr("cy",function(d){ return d.y; });
+
+		 //更新文字坐标
+		 svg_texts.attr("x", function(d){ return d.x; })
+			 .attr("y", function(d){ return d.y; });
+	});
+	  
+	</script>
+	</div>
+
+	<div id="scrollbar2" class="s">
+		<div id="name" ><font color="#000000" size=4>计算机学科各课程有用的参考资料</font></div>
+		<br/><br/>
+		<form action="" method="get"> 
+			<br /> 
+			<h4>自学网站</h4>
+			<hr align=left width=90px color=#987cb9 SIZE=1>
+			<label id="1"><a href="https://www.w3cschool.cn/">w3cschool </a></label> 
+			<label id="2"><a href="https://how2j.cn/">How2J 的 Java教程 </a></label> 
+			<label id="3"><a href="https://www.runoob.com/">菜鸟教程</a> </label> 
+			<label id="5"><a href="https://www.icourse163.org/">慕课网</a> </label> 
+			<label id="6"><a href="https://www.bilibili.com/">哔哩哔哩</a> </label> 
+			<label ><a href="https://study.163.com/">网易云课程</a> </label> 
+			<label ><a href="https://leetcode.com/">Leet Code</a> </label> 
+			<label ><a href="https://github.com/">GitHub</a> </label> 
+			<br/><br/><br/><br/> 
+			<h4>推荐视频</h4>
+			<hr align=left width=90px color=#987cb9 SIZE=1>
+			<label ><a href="https://www.bilibili.com/video/BV1Xt411g7jT">Visual Studio2019入门教程</a> </label> 
+			<label ><a href="https://www.youtube.com/watch?v=NoGcnqDriHg&list=PLdrYbn8q6soPZ8jcKZ9uZCC5LEfhhFMW9">Unix/Linux 系统</a> </label> 
+			<label ><a href="https://space.bilibili.com/20508311/channel/detail?cid=15815">unity游戏特效shader forge</a> </label> 
+			<label ><a href="https://ke.qq.com/course/232556?taid=1532929662749804">unity游戏特效入门</a> </label> 
+			<label ><a href="https://www.xuetangx.com/course/lntu08071001291/4230577">数字信号处理</a> </label> 
+			<label ><a href="http://ssvideo.superlib.com/cxvideo/play/page;jsessionid=0E1A6CEBFCEE2A806C2E9C232E85516F.cxvideo_web_18.30?sid=5913&vid=89557&cid=222&d=c0f868dd2b521a825f3a54d37d48072a">数字电路与逻辑设计</a> </label> 
+			<label ><a href="https://www.icourse163.org/course/HIT-1001516002">数据库系统</a> </label> 
+			<label ><a href="https://www.bilibili.com/video/BV1wD4y1o7AS?p=146">python基础</a> </label> 
+			<label ><a href="https://www.bilibili.com/video/av97078147">pytorch深度学习实践</a> </label> 
+			<label ><a href="http://www.icourses.cn/sCourse/course_6447.html">离散数学</a> </label> 
+			<label ><a href="https://b23.tv/O6szJF">java基础</a> </label> 
+			<label ><a href="https://www.icourse163.org/course/ZJU-1001541001">Java程序设计</a> </label> 
+			<label ><a href="https://github.com/chyyuu/os_course_info">操作系统</a> </label> 
+			<label ><a href="https://www.bilibili.com/video/BV1cE411f78c">编译原理（Compilers）</a> </label> 
+			<label ><a href="https://space.bilibili.com/702528832?from=search&seid=16734152127141950145&spm_id_from=333.337.0.0">C++语言程序设计</a> </label> 
+			<label ><a href="https://docs.qq.com/sheet/DRU5MWHZCTHFGQnhM?tab=ykvdlu"><font color="#ff0000" >其他视频资源见此处（来源B站up碳十二）</font></a> </label>
+			<br/><br/><br/><br/>
+			<h4>推荐书籍（暂无链接）</h4>
+			<hr align=left width=160px color=#987cb9 SIZE=1>
+			<label id="12">《Linux就该这么学》刘遄 </label> 
+			<label id="13">《C Primer Plus》[美]史蒂芬·普拉达 </label> 
+			<label id="14">《数据挖掘导论》Michael steinbach</label>
+			<label id="14">《概率论基础教程》Sheldon M. Ross</label>
+			<label ><a href="https://docs.qq.com/sheet/DRU5MWHZCTHFGQnhM?tab=q4v4sc"><font color="#ff0000" >其他书籍资源见此处（来源B站up碳十二）</font></a> </label> 
+			
+		</form> 
+	</div>
+
+
+	<div id="scrollbar3" class="s">
+		<div id="name3" ><font color="#000000" size=4>我对计算机专业的认识</font></div>
+		<div class="vertical">
+			
+			<p>
+				最早接触计算机的时候还是初一的时候，那个时候选择了机器人灭火这门选修，即是使用相关软件完成较为简单的编程，虽然只是使用已经由别人编程好的程序模块来组成程序运行流程，但是还需要对机器人进行一些调试。说不难也难，当时只在计算机上打过游戏，什么x=x+1，第一反应就是，这个方程不肯定是错误的嘛，自然学习来对认知开拓的帮助还是巨大的。而后呢，在课堂上接触到了一款名为机器人点灯的游戏，因为是全班第一个完成，自然对信心提高极大。后面便有了老师问是否有人想要参加相关的机器人灭火的比赛，有了些许自信，那自然是马上报名。也就开始了学习基础知识的道路。
+				此处省略。
+			</p>
+		
+		<p>
+			而到了高中，因为在浙江学习，有机会选择技术作为高考课程，与物理同起同坐，并通过技术学到了vb相关知识，学会了各类排序的方法和思想，对计算机更为了解。
+		</p>
+		
+		<p>
+			对计算机的认识，主要还是一种非常万能的工具，只要敢想敢做，就能有机会实现。首先对于就业范围来说，这个专业在如今社会很多岗位都有很好的结合性，也就是说与很多岗位都可以进行合作，这个专业的就业范围比较广。其次对于专业应用，计算机在目前的应用很广泛，在人工智能，软件开发，信息管理等等领域都离不开计算机，很多大型的工程对计算机的依赖性更大。最后对于个人的要求，计算机在目前的发展速度极快，这个领域有很好的发展前景。计算机专业有很多个学习方向，有硬件的，也有软件的。针对现阶段，硬件方面的发展几乎到达了巅峰，侧重软件方面的发展比较有前途但不容易学，特别是编写软件。软件方面的发展包括软件的应用和开发，软件的应用是基础，软件的开发要靠专门的技术和依靠相关的开发工具（也算是软件的应用）。
+		</p>
+			
+		</div>
+		
+		
+		
+	</div>
+
+	<div  id="scrollbar4" class="s">
+		<div id="name3" ><font color="#000000" size=4>我的学业规划</font></div>
+		<div class="vertical">
+			
+			<p>在大学本科阶段学习之余，学习一些前端知识，掌握一些pr技术，深度学习一些机器学习内容，能独立制作一些内容，找一个研究生阶段的研究方向</p>
+		
+		<p>研究生阶段，争取能做出些内容，同时闲余时间学习更多的基础学科知识，争取能成为博士</p>
+		
+		<p>博士阶段，继续研究。并继续学习基础学科知识，期待有机会能在基础学科上也有所作为</p>
+		<p>毕业后，根据自己是否研究出一些内容来觉得自己是否继续研究或者选择去就业</p>
+		</div>
+		
+		
+	</div>
+
+
+	
+	<ul>
+		<li id="one" class="active"></li>
+		<li id="two"></li>
+		<li id="three"></li>
+		<li id="four"></li>
+	</ul>
+	<div id="back"></div>
+	<script src="js/script.js">
+	</script>
+</body>
+</html>

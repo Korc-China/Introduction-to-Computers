@@ -1,0 +1,250 @@
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin: 0;padding: 0;border: 0;/* outline: 0; *//* font-weight: inherit; *//* font-style: inherit; *//* font-size: 100%; *//* font-family: inherit; */}
+
+html { width: 100%; height: 100%; }
+body { width: 100%; height: 100%; font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif; background-color: #c8fdf9; color: rgb(0, 0, 0); line-height: 22px; font-size: 14px; overflow: hidden;}
+
+p { padding-bottom: 20px; }
+
+#name { font-family: 'proxima_novasemibold', Helvetica, Arial, sans-serif; font-size: 32px; margin: auto; text-align: center; padding-top: 50px; }
+
+#scrollbar1 .vertical { width: 200px; height: 250px; overflow: auto; padding: 20px; position: absolute; left: 0px; right: 300px; top: 0px; bottom: 0px; margin: auto;}
+#scrollbar1 .horizontal { width: 200px; height: 250px; overflow-x: scroll; overflow-y: hidden; padding: 10px; position: absolute; left: 300px; right: 0px; top: 0px; bottom: 0px; margin: auto;}
+#scrollbar1 .horizontal p { width: 1000px; }
+
+#scrollbar2 .vertical { width: 200px; height: 250px; overflow: auto; padding: 20px; position: absolute; left: 0px; right: 300px; top: 0px; bottom: 0px; margin: auto;}
+#scrollbar2 .horizontal { width: 200px; height: 250px; overflow-x: scroll; overflow-y: hidden; padding: 10px; position: absolute; left: 300px; right: 0px; top: 0px; bottom: 0px; margin: auto;}
+#scrollbar2 .horizontal p { width: 1000px; }
+
+#scrollbar3 .vertical { width: 800px; height: 250px; overflow: auto; padding: 20px; position: absolute; left: 0px; right: 100px; top: 0px; bottom: 0px; margin: auto;}
+#scrollbar3 .horizontal { width: 200px; height: 250px; overflow-x: scroll; overflow-y: hidden; padding: 10px; position: absolute; left: 300px; right: 0px; top: 0px; bottom: 0px; margin: auto;}
+#scrollbar3 .horizontal p { width: 1000px; }
+
+#scrollbar4 .vertical { width: 400px; height: 250px; overflow: auto; padding: 20px; position: absolute; left: 0px; right: 100px; top: 0px; bottom: 0px; margin: auto;}
+#scrollbar4 .horizontal { width: 200px; height: 250px; overflow-x: scroll; overflow-y: hidden; padding: 10px; position: absolute; left: 300px; right: 0px; top: 0px; bottom: 0px; margin: auto;}
+#scrollbar4 .horizontal p { width: 1000px; }
+
+#scrollbar5 .vertical { width: 200px; height: 250px; overflow: auto; padding: 20px; position: absolute; left: 0px; right: 300px; top: 0px; bottom: 0px; margin: auto;}
+#scrollbar5 .horizontal { width: 200px; height: 250px; overflow-x: scroll; overflow-y: hidden; padding: 10px; position: absolute; left: 300px; right: 0px; top: 0px; bottom: 0px; margin: auto;}
+#scrollbar5 .horizontal p { width: 1000px; }
+
+#scrollbar2, #scrollbar3, #scrollbar4, #scrollbar5 { display: none; }
+
+ul { position: absolute; left: 0px; right: 0px; top: 95%; bottom: 0px; margin: auto; width: 110px; height: 7px; }
+li {float: left;background-color: rgba(0,0,0,0.2);width: 7px;height: 7px;list-style-type: none;margin: 7px;border-radius: 5px;cursor: pointer;}
+li.active { background-color: rgba(255,255,255,0.8); cursor: default;}
+
+#name3 { font-family: 'proxima_novasemibold', Helvetica, Arial, sans-serif; font-size: 32px; margin: auto; text-align: center; padding-top: 150px; }
+.links line {
+    stroke: #999;
+    stroke-opacity: 0.6;
+  }
+.nodes circle {
+    stroke: #fff;
+    stroke-width: 1.5px;
+}
+span.pixal{
+    position:absolute;
+    left:-5px;
+    top:-5px;
+    width:4px;
+    height:4px;
+    background:white;
+    border-radius: 50%;
+}
+a{
+    text-decoration: none;
+    }
+form{
+    margin-left: 50px;
+}
+label {
+    padding: 5px;
+    border-radius: 5px;
+    width: fit-content;
+    margin: 10px;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid #0d79d1;
+    color: #0d79d1;
+}
+input {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    appearance: none;
+}
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+h4 {
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+}
+section h2, h4 {
+    margin: 15px 0 0 0;
+}
+hr {
+    margin-left: 0px;
+    margin-right: auto;
+    width: 90px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-top-color: rgb(152, 124, 185);
+    border-right-color: rgb(152, 124, 185);
+    border-bottom-color: rgb(152, 124, 185);
+    border-left-color: rgb(152, 124, 185);
+    background-color: rgb(152, 124, 185);
+    border-bottom-width: 0px;
+}
+
+/*Scrollbar 1*/
+#scrollbar1 ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+ 
+#scrollbar1 ::-webkit-scrollbar-track {
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+ 
+#scrollbar1 ::-webkit-scrollbar-thumb {
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 5px;
+}
+
+#scrollbar1 ::-webkit-scrollbar-corner {
+}
+
+
+/*Scrollbar 2*/
+#scrollbar2 ::-webkit-scrollbar {
+    width: 1px;
+    height: 1px;
+}
+ 
+#scrollbar2 ::-webkit-scrollbar-track {
+    background-color: rgba(0,0,0,0.25);
+}
+ 
+#scrollbar2 ::-webkit-scrollbar-thumb {
+    background-color: rgba(255,255,255,0.8);
+}
+
+#scrollbar2 ::-webkit-scrollbar-corner {
+}
+
+
+/*Scrollbar 3*/
+#scrollbar3 ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+ 
+#scrollbar3 ::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 5px;
+}
+ 
+#scrollbar3 ::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+#scrollbar3 ::-webkit-scrollbar-corner {
+}
+
+/*Scrollbar 4*/
+#scrollbar4 ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+ 
+#scrollbar4 ::-webkit-scrollbar-track {
+    background-color: rgba(0,0,0,0.2);
+    box-shadow: inset 0px 0px 0px 2px #78addf;
+    border-radius: 5px;
+}
+ 
+#scrollbar4 ::-webkit-scrollbar-thumb {
+    background-color: rgba(255,255,255,1);
+    border-radius: 5px;
+}
+
+#scrollbar4 ::-webkit-scrollbar-corner {
+}
+
+/*Scrollbar 5*/
+#scrollbar5 ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+ 
+#scrollbar5 ::-webkit-scrollbar-track {
+    background-color: #4f4f4f;
+    border-radius: 5px;
+}
+ 
+#scrollbar5 ::-webkit-scrollbar-thumb {
+    background-color: #ba605e;
+    border-radius: 5px;
+}
+
+#scrollbar5 ::-webkit-scrollbar-corner {
+}
+
+@font-face {
+    font-family: 'proxima_novalight';
+    src: url('../font/proximanova-light-webfont.eot');
+    src: url('../font/proximanova-light-webfont.eot') format('embedded-opentype'),
+         url('../font/proximanova-light-webfont.woff') format('woff'),
+         url('../font/proximanova-light-webfont.ttf') format('truetype'),
+         url('http://www.stampready.net/codecanyon/products/css3_scroll/css/font/proximanova-light-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'proxima_nova_rgregular';
+    src: url('../font/proximanova-regular-webfont.eot');
+    src: url('../font/proximanova-regular-webfont.eot') format('embedded-opentype'),
+         url('../font/proximanova-regular-webfont.woff') format('woff'),
+         url('../font/proximanova-regular-webfont.ttf') format('truetype'),
+         url('http://www.stampready.net/codecanyon/products/css3_scroll/css/font/proximanova-regular-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'proxima_novasemibold';
+    src: url('../font/proximanova-semibold-webfont.eot');
+    src: url('../font/proximanova-semibold-webfont.eot') format('embedded-opentype'),
+         url('../font/proximanova-semibold-webfont.woff') format('woff'),
+         url('../font/proximanova-semibold-webfont.ttf') format('truetype'),
+         url('http://www.stampready.net/codecanyon/products/css3_scroll/css/font/proximanova-semibold-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
